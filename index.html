@@ -123,7 +123,7 @@
             position: relative;
             overflow: hidden;
             background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), 
-                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+                        url('./images/hero1.jpg') center/cover;
         }
 
         .hero-content {
@@ -757,6 +757,16 @@
                 padding: 1rem;
             }
 
+            .mobile-toggle {
+                position: relative;
+                z-index: 1101;
+            }
+
+            #hero {
+                background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), 
+                            url('./images/hero.jpg') center/cover;
+            }
+
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -768,13 +778,16 @@
                 gap: 1rem;
                 transform: translateY(-100%);
                 opacity: 0;
+                pointer-events: none;
                 transition: var(--transition);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                z-index: 1100;
             }
 
             .nav-menu.active {
                 transform: translateY(0);
                 opacity: 1;
+                pointer-events: auto;
             }
 
             .mobile-toggle {
@@ -1107,21 +1120,45 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Image Classification System">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Revolutionizing Tamil Language Analysis">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="project-tag">ML</span>
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Tamil</span>
+                            <span class="project-tag">Research</span>
                         </div>
-                        <h3 class="project-title">Image Classification System</h3>
-                        <p class="project-description">Deep learning model achieving 95% accuracy on custom dataset. Implemented transfer learning with ResNet50 and deployed via Flask API.</p>
+                        <h3 class="project-title">Revolutionizing Tamil Language Analysis: A Natural Language Processing Model Development Approach</h3>
+                        <p class="project-description">Published in IEEE Xplore. Presented at the International Conference on Electrical, Computer and Energy Technologies (ICECET). Led a one-year research group to develop and evaluate a Tamil NLP model.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link">
+                            <a href="https://github.com/RGinorajh/Research-NLP_typingAssistant" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="https://ieeexplore.ieee.org/document/10698527" class="project-link">
+                                <i class="fas fa-book-open"></i> View IEEE Publication
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Legal Document Analyzer">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">LegalTech</span>
+                            <span class="project-tag">PyTorch</span>
+                            <span class="project-tag">FastAPI</span>
+                        </div>
+                        <h3 class="project-title">Legal Document Analyzer</h3>
+                        <p class="project-description">Upload contracts, agreements, and T&Cs to get: plain-English summaries, risk assessment of problematic clauses, and interactive Q&amp;A for specific terms. Built with PyTorch, Transformers, FAISS, FastAPI, and Streamlit/Gradio. Disclaimer: This tool provides general information only, not legal advice.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/RGinorajh/legal-document-analyzer" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://huggingface.co/spaces/GinorajhR/legal-document-analyzer" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -1130,44 +1167,22 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Sentiment Analysis API">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115" alt="ChurnAI: Intelligent Customer Retention Advisor">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="project-tag">NLP</span>
-                            <span class="project-tag">PyTorch</span>
-                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">ML</span>
+                            <span class="project-tag">Churn</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Telecom Industry</span>
                         </div>
-                        <h3 class="project-title">Sentiment Analysis API</h3>
-                        <p class="project-description">Real-time sentiment analysis using BERT transformers. RESTful API handling 1000+ requests/min with 92% accuracy.</p>
+                        <h3 class="project-title">ChurnAI: Intelligent Customer Retention Advisor</h3>
+                        <p class="project-description">Predicts customer churn and recommends AI-powered retention strategies. Built with Python; model trained in Google Colab and deployed on Hugging Face Spaces with a Streamlit dashboard and XAI (SHAP) explanations.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link">
+                            <a href="https://github.com/RGinorajh/Customer-Churn-Prediction-Model" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="AI-Powered Dashboard">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">Full-Stack</span>
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                        </div>
-                        <h3 class="project-title">AI-Powered Dashboard</h3>
-                        <p class="project-description">Interactive analytics dashboard with ML predictions. Features real-time data visualization and model monitoring.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
+                            <a href="https://huggingface.co/spaces/GinorajhR/Customer-Churn-Prediction" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -1201,7 +1216,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>alex@example.com</p>
+                            <p>ginorajr@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
